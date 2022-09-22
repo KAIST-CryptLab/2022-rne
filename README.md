@@ -1,6 +1,8 @@
 # 2022-rne
 
 ## 설치 스크립트
+이 리포지토리는 20-046 박지훈과 21-025 김유성 group이 열심히 짠 코드입니당 ㅋㅋㄹㅋㅋㅃㅃ
+
 ```
 git clone https://github.com/oxjihun/ANFConv.git
 cd ANFConv
@@ -27,3 +29,4 @@ git clone https://github.com/oxjihun/lowmc_test.git
 rm lowmc/test.cpp
 mv lowmc_test/test.cpp lowmc
 ```
+
