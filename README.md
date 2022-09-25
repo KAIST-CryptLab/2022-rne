@@ -6,17 +6,6 @@
 아래는 설치를 위한 스크립트입니다.
 
 ```
-git clone https://github.com/oxjihun/ANFConv.git
-cd ANFConv
-g++ -o ANFConv ANFConv.cpp
-cd ..
-git clone https://github.com/oxjihun/automate.git
-cd automate
-chmod +x ./edit_lowmc.sh
-chmod +x ./main.sh
-chmod +x ./resolve.sh
-chmod +x ./sheets.sh
-cd ..
 git clone --depth 1 https://github.com/meelgroup/bosphorus
 cd bosphorus
 mkdir build
@@ -26,9 +15,24 @@ make -j4
 ./bosphorus -h
 cd ..
 cd ..
+```
+```
 git clone https://github.com/LowMC/lowmc.git
-git clone https://github.com/oxjihun/lowmc_test.git
+```
+```
+git clone https://github.com/KAIST-CryptLab/2022-rne.git
 rm lowmc/test.cpp
-mv lowmc_test/test.cpp lowmc
+mv 2022-rne/lowmc_test/test.cpp lowmc
+cd 2022-rne/ANFConv
+g++ -o ANFConv ANFConv.cpp
+cd ..
+cd ..
+cd 2022-rne/automate
+chmod +x ./edit_lowmc.sh
+chmod +x ./main.sh
+chmod +x ./resolve.sh
+chmod +x ./sheets.sh
+cd ..
+cd ..
 ```
 
