@@ -35,7 +35,7 @@ ciphertexts=();
 
 for ((i=0; i<$t; i++))
     do
-        ciphertexts+=($({ echo $key; echo ${plaintexts[i]}; } | ../lowmc/LowMC))
+        ciphertexts+=($({ echo $key; echo ${plaintexts[i]}; } | ../../lowmc/LowMC))
     done
 
 # generate input text for ANFConv
@@ -48,7 +48,7 @@ for ((i=0; i<$t; i++))
     done
 
 printf $input > generated_input.txt
-printf $input | ../ANFConv/ANFConv > /dev/null
+printf $input | ../../ANFConv/ANFConv > /dev/null
 
 rm Kmatrix.txt
 rm Lmatrix.txt
