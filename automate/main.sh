@@ -48,7 +48,7 @@ for ((i=0; i<$t; i++))
     done
 
 printf $input > generated_input.txt
-printf $input | ../../ANFConv/ANFConv > /dev/null
+printf $input | ../ANFConv/ANFConv > /dev/null
 
 rm Kmatrix.txt
 rm Lmatrix.txt
