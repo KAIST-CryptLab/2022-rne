@@ -11,20 +11,4 @@
 * [LowMC](https://github.com/LowMC/lowmc)
 
 ### 설치 스크립트
-```
-git clone https://github.com/KAIST-CryptLab/2022-rne.git
-rm lowmc/test.cpp
-mv 2022-rne/lowmc_test/test.cpp lowmc
-cd 2022-rne/ANFConv
-g++ -o ANFConv ANFConv.cpp
-cd ..
-cd ..
-cd 2022-rne/automate
-chmod +x ./edit_lowmc.sh
-chmod +x ./main.sh
-chmod +x ./resolve.sh
-chmod +x ./sheets.sh
-cd ..
-cd ..
-```
-
+이 리포지토리를 clone한 다음에 `initialize.sh`을 실행하면 됩니다. 
