@@ -7,8 +7,9 @@
 
 ### Prerequisites
 
-* `Bosphorus`: [Building, Testing, Installing](https://github.com/meelgroup/bosphorus#building-testing-installing) 참고
-* [LowMC](https://github.com/LowMC/lowmc)
+* [Bosphorus](https://github.com/meelgroup/bosphorus): [Building, Testing, Installing](https://github.com/meelgroup/bosphorus#building-testing-installing)를 참고하여 설치하면 됩니다. 
+* [LowMC](https://github.com/LowMC/lowmc): clone만 하면 됩니다. 
+* 두 개의 리포지토리를 같은 폴더 안에 두어야 합니다. 
 
 ### 설치 스크립트
 이 리포지토리를 clone한 다음에 `initialize.sh`을 실행하면 됩니다. 
