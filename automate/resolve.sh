@@ -3,7 +3,7 @@
 # Modified from https://github.com/meelgroup/bosphorus
 
 echo "Started solving ANF at" $(date)
-{ time ../../bosphorus/build/bosphorus --anfread ANF.txt --solvewrite solution > ./resolve_bosphorus.txt; } 2>&1
+{ time ../bosphorus/build/bosphorus --anfread ANF.txt --solvewrite solution > ./resolve_bosphorus.txt; } 2>&1
 echo ""
 echo "Finished solving ANF at" $(date)
 echo ""
