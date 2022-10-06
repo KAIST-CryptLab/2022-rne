@@ -1,6 +1,6 @@
-rm ../lowmc/test.cpp
-cp ../2022-rne/lowmc_test/test.cpp ../lowmc
-cd ../2022-rne/ANFConv
+rm lowmc/test.cpp
+cp lowmc_test/test.cpp lowmc
+cd ANFConv
 g++ -o ANFConv ANFConv.cpp
 cd ..
 cd automate
