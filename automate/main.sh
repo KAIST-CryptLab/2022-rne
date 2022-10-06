@@ -35,7 +35,7 @@ ciphertexts=();
 
 for ((i=0; i<$t; i++))
     do
-        ciphertexts+=($({ echo $key; echo ${plaintexts[i]}; } | ../../lowmc/LowMC))
+        ciphertexts+=($({ echo $key; echo ${plaintexts[i]}; } | ../lowmc/LowMC))
     done
 
 # generate input text for ANFConv

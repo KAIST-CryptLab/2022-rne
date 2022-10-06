@@ -12,6 +12,6 @@ rounds=$4
 sed -i "8s/.*/${cu}numofboxes = ${numofboxes}\;/;
         9s/.*/${cu}blocksize = ${blocksize}\;/;
         10s/.*/${cu}keysize = ${keysize}\;/;
-        11s/.*/${cu}rounds = ${rounds}\;/;" ../../lowmc/LowMC.h
+        11s/.*/${cu}rounds = ${rounds}\;/;" ../lowmc/LowMC.h
 
-g++ ../../lowmc/LowMC.cpp ../../lowmc/test.cpp -o ../../lowmc/LowMC
+g++ ../lowmc/LowMC.cpp ../lowmc/test.cpp -o ../lowmc/LowMC
