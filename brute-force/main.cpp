@@ -108,7 +108,7 @@ int f(int i);
 }
 int main()
 {
-    char cmd[1000];
+    char cmd0[1000], cmd[1000];
     cout << "numofboxes: ";
     cin >> m;
     cout << "blocksize: ";
@@ -119,6 +119,8 @@ int main()
     cin >> r;
     cout << "testcase: ";
     cin >> t;
+    sprintf(cmd0, "../automate/edit_lowmc.sh %d %d %d %d", m, n, k, r);
+    system(cmd0);
     int M[200][200] = {0,}, C[200][200] = {0,};
     for(int j = 0; j < t; j++)
     {
@@ -155,9 +157,9 @@ int main()
             {
                 cip = strcat(cip, (char)(C[me][y]));
             }
-            sprintf(cmd, "c:\\Users\\user\\Desktop\\RnE\\ANFConv\\.cpp %d %s", mes, f(i));
+            sprintf(cmd, "{ echo %s; echo %s; } | ../lowmc/LowMC > ciphertext.txt", f(i), mes);
             system(cmd);
-            ifstream input(".txt");
+            ifstream input("ciphertext.txt");
             string cipher = "";
             input >> cipher;
             if(cipher != cip)
