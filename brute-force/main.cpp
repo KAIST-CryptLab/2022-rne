@@ -1,5 +1,6 @@
 // https://blockdmask.tistory.com/338
 // https://cplusplus.com/reference/string/string/insert/
+// https://codingdog.tistory.com/entry/c-string-cstr-함수-string을-char-로-바꿔봅시다
 
 #include <iostream>
 #include <stdio.h>
@@ -69,7 +70,7 @@ int main()
             {
                 cip.push_back((char)(C[me][y]));
             }
-            sprintf(cmd, "{ echo %s; echo %s; } | ../lowmc/LowMC > ciphertext.txt", f(i), mes);
+            sprintf(cmd, "{ echo %s; echo %s; } | ../lowmc/LowMC > ciphertext.txt", f(i).c_str(), mes.c_str());
             system(cmd);
             ifstream input("ciphertext.txt");
             string cipher = "";
@@ -81,7 +82,7 @@ int main()
             }
             if(k == t)
             {
-                printf("%s\n", f(i));
+                printf("%s\n", f(i).c_str());
                 break;
             }
         }
