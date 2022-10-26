@@ -54,6 +54,6 @@ rm Kmatrix.txt
 rm Lmatrix.txt
 rm roundconstant.txt
 
-# resolve.sh
+# guess and determine
 
-./resolve.sh $keysize > resolve_result.txt
+python guess_determine.py
