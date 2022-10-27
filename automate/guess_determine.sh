@@ -56,4 +56,4 @@ rm roundconstant.txt
 
 # guess and determine
 
-python guess_determine.py
+python guess_determine.py $1

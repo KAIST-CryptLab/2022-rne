@@ -1,5 +1,5 @@
 from __future__ import print_function # https://stackoverflow.com/questions/11266068/python-avoid-new-line-with-print-command
-import time, os
+import time, os, sys
 
 with open('testcase.txt', 'r') as file: # does not read keys
     numofboxes = int(file.readline().strip())
@@ -14,7 +14,7 @@ key_var_end = blocksize * (rounds + 2) * t + keysize
 with open('ANF.txt', 'r') as file:
     ANF = file.readlines()
 
-num_guess = int(input('How many bits to guess? '))
+num_guess = int(sys.argv[1]) # int(input('How many bits to guess? '))
 assert num_guess <= keysize
 
 start_time = time.time() # comonly used technique
@@ -42,10 +42,15 @@ for i in range(2**num_guess, 2**(num_guess+1)):
             end_time = time.time() # commonly used technique
             result = file.readline().split()
             print('Found the bits, which turn out to be...')
-            for j in range(keysize):
-                print(int(result[-j-1][0] != '-'), end='')
+            with open('guess_determine_result.txt', 'w') as file_result:
+                for j in range(keysize):
+                    print(int(result[-j-1][0] != '-'), end='')
+                    file_result.write(chr(48 + int(result[-j-1][0] != '-')))
     
     if end_time is not None:
         break
 
-print('\n\nTotal elasped time: ' + str(end_time - start_time) + ' (s)')
+end_comment = '\n\nTotal elasped time: ' + str(end_time - start_time) + ' (s)'
+print(end_comment)
+with open('guess_determine_result.txt', 'a') as file_result:
+    file_result.write(end_comment) 
