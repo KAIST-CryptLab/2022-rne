@@ -9,10 +9,10 @@
 #include <fstream>
 using namespace std;
 int n, k, m, r, t;
-string f(int i)
+string f(int i, int len)
 {
     string ans = "";
-    while(i > 0)
+    while(len--)
     {
         ans.insert(0, 1, i%2 + 48);
         i = i / 2;
@@ -48,29 +48,33 @@ int main()
             scanf("%1d", &C[j][i]);
         }
     }
+
+    printf("\n");
     time_t start = time(NULL);
-    int j = 1, k=0;
+    int j = 1;
     string cip, mes = "";
     for(int i = 1; i <= n; i++)
     {
         j *= 2;
     }
+    int k_count;
     for(int i = 0; i < j; i++)
     {
-        k = 0;
+        k_count = 0;
         for(int me = 0; me < t; me++)
         {
             mes = "";
-            for(int y = 0; y < m; y++)
+            for(int y = n-1; y >= 0; y--)
             {
-                mes.push_back((char)(M[me][y]));
+                mes.push_back(48 + M[me][y]);
             }
             cip = "";
-            for(int y = 0; y < m; y++)
+            for(int y = n-1; y >= 0; y--)
             {
-                cip.push_back((char)(C[me][y]));
+                cip.push_back(48 + C[me][y]);
             }
-            sprintf(cmd, "{ echo %s; echo %s; } | ../lowmc/LowMC > ciphertext.txt", f(i).c_str(), mes.c_str());
+            // printf("%s %s\n", f(i, k).c_str(), mes.c_str());
+            sprintf(cmd, "{ echo %s; echo %s; } | ../lowmc/LowMC > ciphertext.txt", f(i, k).c_str(), mes.c_str());
             system(cmd);
             ifstream input("ciphertext.txt");
             string cipher = "";
@@ -78,11 +82,12 @@ int main()
             if(cipher != cip)
             {
                 me = t;
-                k += 1;
+            } else {
+                k_count += 1;
             }
-            if(k == t)
+            if(k_count == t)
             {
-                printf("%s\n", f(i).c_str());
+                printf("%s\n", f(i, k).c_str());
                 break;
             }
         }
