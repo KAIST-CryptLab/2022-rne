@@ -32,6 +32,7 @@ int main()
     cin >> r;
     cout << "testcase: ";
     cin >> t;
+    // printf("%d %d %d %d %d ", n, m, k, r, t);
     sprintf(cmd0, "../automate/edit_lowmc.sh %d %d %d %d", m, n, k, r);
     system(cmd0);
     int M[200][200] = {0,}, C[200][200] = {0,};
@@ -53,7 +54,7 @@ int main()
     time_t start = time(NULL);
     int j = 1;
     string cip, mes = "";
-    for(int i = 1; i <= n; i++)
+    for(int i = 1; i <= k; i++)
     {
         j *= 2;
     }
