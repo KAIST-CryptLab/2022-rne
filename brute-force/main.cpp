@@ -89,6 +89,7 @@ int main()
             if(k_count == t)
             {
                 printf("%s\n", f(i, k).c_str());
+                i = j;
                 break;
             }
         }
