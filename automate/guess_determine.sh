@@ -1,4 +1,7 @@
+#!/bin/bash
+
 # Author: 20-046 박지훈
+# https://stackoverflow.com/questions/53496156/bin-sh-1-syntax-error-word-unexpected-using-os-system-from-python
 
 plaintexts=();
 
