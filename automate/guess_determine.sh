@@ -2,6 +2,7 @@
 
 # Author: 20-046 박지훈
 # https://stackoverflow.com/questions/53496156/bin-sh-1-syntax-error-word-unexpected-using-os-system-from-python
+# https://stackoverflow.com/questions/8967902/why-do-you-need-to-put-bin-bash-at-the-beginning-of-a-script-file
 
 plaintexts=();
 
